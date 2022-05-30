@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-download-manager-android"
+    version="0.0.1-dev">
+    <name>Download-Manager (Android)</name>
+    <description>This Plugin uses the android-system download manager</description>
+    <license>MIT</license>
+    <keywords>cordova,download,manager,android,files</keywords>
+    <repo>tbd</repo>
+    <issue>tbd</issue>
+
+    <engines>
+        <engine name="cordova-android" version=">=9.0.0" />
+    </engines>
+
+    
+    <js-module src="www/download-manager-android.js" name="androidDownloadManager">
+        <clobbers target="AndroidDownloadManager" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DownloadManagerCordova" >
+                <param name="android-package" value="org.schramlsoft.cordova.android.DownloadManagerCordova"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/DownloadManagerCordova.java" target-dir="src/org/schramlsoft/cordova/android" />
+    </platform>
+</plugin>
