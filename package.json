@@ -1,6 +1,6 @@
 {
   "name": "@schramlsoft/cordova-plugin-downloadmanager-android",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This Plugin uses the android-system download manager",
   "cordova": {
     "id": "cordova-plugin-downloadmanager-android",
