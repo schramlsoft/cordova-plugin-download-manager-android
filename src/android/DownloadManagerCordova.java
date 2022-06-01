@@ -25,12 +25,14 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaInterface;
+import org.apache.commons.io.FilenameUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+
 
 import android.database.Cursor;
 import android.os.Environment;
@@ -93,10 +95,6 @@ public class DownloadManagerCordova extends CordovaPlugin {
         
     }
 
-    // --------------------------------------------------------------------------
-    // LOCAL METHODS
-    // --------------------------------------------------------------------------
-
     /**
      * enqueue for starting a download
      *
@@ -112,7 +110,7 @@ public class DownloadManagerCordova extends CordovaPlugin {
         // get params
         try {
             url = data.getString("url");
-            fileName = data.getString("fileName");
+            fileName = data.optString("fileName", FilenameUtils.getName(url));
             title = data.optString("title", fileName);
             description = data.optString("description", "Download");
             mimeType = data.optString("mimeType", "application/octet-stream");

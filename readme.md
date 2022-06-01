@@ -22,7 +22,9 @@ The `EnqueueDataInterface` contains following data:
 ```ts
 interface EnqueueDataInterface {
     url: string;
-    fileName: string;
+    fileName?: string;
+    title?: string;
+    description?: string;
     mimeType?: string;
     header?: [
         {
