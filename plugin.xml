@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-downloadmanager-android"
-    version="0.0.1-dev">
+    version="0.0.2">
     <name>Download-Manager (Android)</name>
     <description>This Plugin uses the android-system download manager</description>
     <license>MIT</license>
