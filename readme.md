@@ -9,7 +9,7 @@ This Plugin includes enqueueing downloads (including header support for e.g. add
 
 for npm hit following command:
 ```
-npm install cordova-plugin-download-manager-android
+npm install cordova-plugin-downloadmanager-android
 ```
 
 ## Functions

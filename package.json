@@ -1,16 +1,16 @@
 {
-  "name": "@schramlsoft/cordova-plugin-download-manager-android",
-  "version": "0.0.1-dev",
+  "name": "@schramlsoft/cordova-plugin-downloadmanager-android",
+  "version": "0.0.1",
   "description": "This Plugin uses the android-system download manager",
   "cordova": {
-    "id": "cordova-plugin-download-manager-android",
+    "id": "cordova-plugin-downloadmanager-android",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/schramlsoft/cordova-plugin-download-manager-android.git"
+    "url": "git+ssh://git@github.com/schramlsoft/cordova-plugin-downloadmanager-android.git"
   },
   "keywords": [
     "cordova",
@@ -28,7 +28,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/schramlsoft/cordova-plugin-download-manager-android/issues"
+    "url": "https://github.com/schramlsoft/cordova-plugin-downloadmanager-android/issues"
   },
-  "homepage": "https://github.com/schramlsoft/cordova-plugin-download-manager-android#readme"
+  "homepage": "https://github.com/schramlsoft/cordova-plugin-downloadmanager-android#readme"
 }
