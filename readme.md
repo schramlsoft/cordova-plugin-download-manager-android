@@ -16,11 +16,11 @@ npm install cordova-plugin-downloadmanager-android
 ### Enqueue - queues a download to the download-manager of android system
 
 Call following function to queue a download to the download-manager which will download the file as soon as possible:
-`AndroidDownloadManager.enqueue(data: EnqueueDataInterface, success: SuccessCallback, error: ErrorCallback);`
+`AndroidDownloadManager.enqueue(data: EnqueueData, success: SuccessCallback, error: ErrorCallback);`
 
-The `EnqueueDataInterface` contains following data:
+The `EnqueueData` contains following data:
 ```ts
-interface EnqueueDataInterface {
+interface EnqueueData {
     url: string;
     fileName?: string;
     title?: string;
@@ -40,7 +40,7 @@ The `SuccessCallback` is a function defined like so `(id: string) => void`
 The `ErrorCallback` is a function defined like so `(error: string) => void`
 #### Example
 
-```
+```js
 AndroidDownloadManager.enqueue(
     {
         url: "https://google.de/big-picture.png",
@@ -61,19 +61,19 @@ AndroidDownloadManager.enqueue(
 ### Query - request the status of a download
 
 Call following function to query the status of a specific download enquede by the download-manager:
-`AndroidDownloadManager.query(data: QueryDataInterface, success: SuccessCallback, error: ErrorCallback);`
+`AndroidDownloadManager.query(data: QueryData, success: SuccessCallback, error: ErrorCallback);`
 
-The `QueryDataInterface` contains following data:
+The `QueryData` contains following data:
 ```ts
-interface QueryDataInterface {
+interface QueryData {
     id: string;
 }
 ```
 
-The `SuccessCallback` is a function defined like so `(data: DownloadStatusInterface) => void` with following `data` response:
+The `SuccessCallback` is a function defined like so `(data: DownloadStatus) => void` with following `data` response:
 
 ```ts
-interface DownloadStatusInterface {
+interface DownloadStatus {
     id: string;                     // https://developer.android.com/reference/android/app/DownloadManager#COLUMN_ID
     title: string;                  // https://developer.android.com/reference/android/app/DownloadManager#COLUMN_TITLE
     description: string;            // https://developer.android.com/reference/android/app/DownloadManager#COLUMN_DESCRIPTION
@@ -92,7 +92,7 @@ interface DownloadStatusInterface {
 The `ErrorCallback` is a function defined like so `(error: string) => void`
 #### Example
 
-```
+```js
 AndroidDownloadManager.query(
     {id: 51},
     (data) => console.log(data),
@@ -103,11 +103,11 @@ AndroidDownloadManager.query(
 ### Remove - removes a download
 
 Call following function to remove a download from download folder and notification area:
-`AndroidDownloadManager.remove(data: RemoveDataInterface, success: SuccessCallback, error: ErrorCallback);`
+`AndroidDownloadManager.remove(data: RemoveData, success: SuccessCallback, error: ErrorCallback);`
 
-The `RemoveDataInterface` contains following data:
+The `RemoveData` contains following data:
 ```ts
-interface RemoveDataInterface {
+interface RemoveData {
     id: string;
 }
 ```
@@ -117,7 +117,7 @@ The `SuccessCallback` is a function defined like so `(info: 'done' | 'failed') =
 The `ErrorCallback` is a function defined like so `(error: string) => void`
 #### Example
 
-```
+```js
 AndroidDownloadManager.remove(
     {id: 12},
     (data) => console.log(data),
@@ -125,7 +125,16 @@ AndroidDownloadManager.remove(
 );
 ```
 
+## Types
+Using types within the namspace `AndroidDownloadManger`.
 
+For Example:
+```ts
+const data: AndroidDownloadManager.EnqueueData = {
+    url: 'https://google.de/big-picture.png';
+    fileName?: 'bigPicture.png';
+}
+```
 
 
 ## General Development

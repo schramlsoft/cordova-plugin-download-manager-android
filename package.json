@@ -1,6 +1,6 @@
 {
-  "name": "@schramlsoft/cordova-plugin-downloadmanager-android",
-  "version": "0.0.2",
+  "name": "cordova-plugin-downloadmanager-android",
+  "version": "0.0.1-dev",
   "description": "This Plugin uses the android-system download manager",
   "cordova": {
     "id": "cordova-plugin-downloadmanager-android",
@@ -24,6 +24,7 @@
   "author": "W. Schraml Softwarehaus GmbH",
   "license": "MIT",
   "main": "www/download-manager-android.js",
+  "types": "www/download-manager-android.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
