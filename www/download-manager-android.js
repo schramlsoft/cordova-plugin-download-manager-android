@@ -27,21 +27,21 @@ var exec = require('cordova/exec');
  * phone, etc.
  * @constructor
  */
-function AndroidDownloadManager () {
+function DownloadManagerAndroid () {
 
 }
 
-AndroidDownloadManager.prototype.enqueue = function (enqueueData, successCallback, errorCallback) {
+DownloadManagerAndroid.prototype.enqueue = function (enqueueData, successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'DownloadManagerCordova', 'enqueue', [enqueueData]);
 };
 
-AndroidDownloadManager.prototype.query = function (queryData, successCallback, errorCallback) {
+DownloadManagerAndroid.prototype.query = function (queryData, successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'DownloadManagerCordova', 'query', [queryData]);
 };
 
-AndroidDownloadManager.prototype.remove = function (removeData, successCallback, errorCallback) {
+DownloadManagerAndroid.prototype.remove = function (removeData, successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'DownloadManagerCordova', 'remove', [removeData]);
 };
 
 
-module.exports = new AndroidDownloadManager();
+module.exports = new DownloadManagerAndroid();

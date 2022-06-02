@@ -15,13 +15,13 @@
     </engines>
 
     
-    <js-module src="www/download-manager-android.js" name="androidDownloadManager">
-        <clobbers target="AndroidDownloadManager" />
+    <js-module src="www/download-manager-android.js" name="DownloadManagerAndroid">
+        <clobbers target="DownloadManagerAndroid" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
-        <framework src="commons-io:commons-io:jar:2.11.0" />
+        <framework src="commons-io:commons-io:2.11.0" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="DownloadManagerCordova" >
                 <param name="android-package" value="org.schramlsoft.cordova.android.DownloadManagerCordova"/>

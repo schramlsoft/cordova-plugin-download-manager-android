@@ -16,7 +16,7 @@ npm install cordova-plugin-downloadmanager-android
 ### Enqueue - queues a download to the download-manager of android system
 
 Call following function to queue a download to the download-manager which will download the file as soon as possible:
-`AndroidDownloadManager.enqueue(data: EnqueueData, success: SuccessCallback, error: ErrorCallback);`
+`DownloadManagerAndroid.enqueue(data: EnqueueData, success: SuccessCallback, error: ErrorCallback);`
 
 The `EnqueueData` contains following data:
 ```ts
@@ -41,7 +41,7 @@ The `ErrorCallback` is a function defined like so `(error: string) => void`
 #### Example
 
 ```js
-AndroidDownloadManager.enqueue(
+DownloadManagerAndroid.enqueue(
     {
         url: "https://google.de/big-picture.png",
         fileName: "big-picture.png",
@@ -61,7 +61,7 @@ AndroidDownloadManager.enqueue(
 ### Query - request the status of a download
 
 Call following function to query the status of a specific download enquede by the download-manager:
-`AndroidDownloadManager.query(data: QueryData, success: SuccessCallback, error: ErrorCallback);`
+`DownloadManagerAndroid.query(data: QueryData, success: SuccessCallback, error: ErrorCallback);`
 
 The `QueryData` contains following data:
 ```ts
@@ -93,7 +93,7 @@ The `ErrorCallback` is a function defined like so `(error: string) => void`
 #### Example
 
 ```js
-AndroidDownloadManager.query(
+DownloadManagerAndroid.query(
     {id: 51},
     (data) => console.log(data),
     (error) => console.log(error)
@@ -103,7 +103,7 @@ AndroidDownloadManager.query(
 ### Remove - removes a download
 
 Call following function to remove a download from download folder and notification area:
-`AndroidDownloadManager.remove(data: RemoveData, success: SuccessCallback, error: ErrorCallback);`
+`DownloadManagerAndroid.remove(data: RemoveData, success: SuccessCallback, error: ErrorCallback);`
 
 The `RemoveData` contains following data:
 ```ts
@@ -118,7 +118,7 @@ The `ErrorCallback` is a function defined like so `(error: string) => void`
 #### Example
 
 ```js
-AndroidDownloadManager.remove(
+DownloadManagerAndroid.remove(
     {id: 12},
     (data) => console.log(data),
     (error) => console.log(error)
@@ -130,7 +130,7 @@ Using types within the namspace `AndroidDownloadManger`.
 
 For Example:
 ```ts
-const data: AndroidDownloadManager.EnqueueData = {
+const data: DownloadManagerAndroid.EnqueueData = {
     url: 'https://google.de/big-picture.png';
     fileName?: 'bigPicture.png';
 }
