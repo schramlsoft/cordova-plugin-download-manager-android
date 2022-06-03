@@ -1,4 +1,4 @@
-export declare interface DownloadManagerAndroid {
+export declare interface DownloadManagerAndroidInterface {
     enqueue: EnqueueFunction;
     query: QueryFunction;
     remove: RemoveFunciton;
@@ -18,7 +18,7 @@ export declare interface EnqueueData {
     title?: string;
     description?: string;
     mimeType?: string;
-    header?: EnqueueHeaderData[]        
+    header?: EnqueueHeaderData[]
 }
 export declare interface EnqueueHeaderData {
     header: string;
