@@ -8,8 +8,13 @@ This Plugin includes enqueueing downloads (including header support for e.g. add
 ## Installation
 
 for npm hit following command:
-```
+```sh
 npm install cordova-plugin-downloadmanager-android
+```
+
+afterwards install the plugin
+```sh
+cordova plugin add cordpva-plugin-downloadmanager-android
 ```
 
 ## Functions
